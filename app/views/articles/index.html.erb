@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Wikinonomous</title>
+</head>
+<body>
+  <h1>Welcome to Hipsternonomous!</h1>
+  <%= link_to "Add new article", new_article_path %>
+  <ul>
+    <% @articles.each do |article| %>
+      <li>
+        <%= link_to "#{article.title}", article_path(article) %>
+      </li>
+    <% end %>
+  </ul>
+</body>
+</html>
